@@ -11,6 +11,11 @@
         rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- icon -->
+         <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      rel="stylesheet"
+    />
 </head>
 
 <body>
@@ -63,19 +68,19 @@
                 <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="firstClassInput" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <p><button onclick="firstClass('first',true)" class="color"><i class="fas fa-plus"></i></button> <button onclick="firstClass('first',false)" class="color"><i class="fas fa-minus"></i></button></p>
                 </div>
             </div>
                 <div class="input-group f-class">
                     <div>
                         <label for="">Economy ($100)</label>
-                        <input class="inp-style inp-width" type="number" name="">
+                        <input id="economyClassInput" class="inp-style inp-width" type="number" name="" value="0">
                     </div>
                     <div class="plus-minus-btn">
-                        <p> <span id="plus">+</span> <span>-</span> </p>
+                        <p><button onclick="firstClass('economy',true)" class="color"><i class="fas fa-plus"></i></button> <button onclick="firstClass('economy',false)" class="color"><i class="fas fa-minus"></i></button></p>
                     </div>
                 </div>
 
@@ -111,12 +116,8 @@
             <button class="btn-style">Book Now</button>
         </div>
     </main>
-    <script>
-        document.getElementById("plus").addEventListener("click",function(){
-            console.log('ataur');
-        })
-    </script>
-
+    <!-- javascript -->
+    <script src="script.js"></script>
     <!--Thank You-->
 </body>
 
