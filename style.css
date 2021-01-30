@@ -126,3 +126,15 @@ a.active {
 .color {
   color: #3352f2;
 }
+.thank-you {
+  margin-left: 20%;
+  margin-top: 5%;
+  color: black;
+  background-color: #f3f5ff;
+  height: 200px;
+  width: 50%;
+  text-align: center;
+  padding-top: 50px;
+  border-radius: 10px;
+  display: none;
+}

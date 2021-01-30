@@ -26,3 +26,8 @@ function calculateTotal() {
   var total = totalSub + vat;
   document.getElementById("total-cost").innerText = total;
 }
+// HIDE SECTION
+document.getElementById("bookNow").addEventListener("click", function () {
+  document.getElementById("mainSection").style.display = "none";
+  document.getElementById("thankSection").style.display = "block";
+});
