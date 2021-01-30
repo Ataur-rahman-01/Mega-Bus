@@ -1,27 +1,7 @@
-// document
-//   .getElementById("firstClassPlusbtn")
-//   .addEventListener("click", function () {
-//     firstClass(true);
-// var setNumberCount = document.getElementById("firstClassInput");
-// var setNumberValue = parseInt(setNumberCount.value);
-// var setCount = setNumberValue + 1;
-// setNumberCount.value = setCount;
-// document.getElementById("firstClassInput").innerText = setCount;
-//   });
-// document
-//   .getElementById("firstClassMinusbtn")
-//   .addEventListener("click", function () {
-//     firstClass(false);
-// var setNumberCount = document.getElementById("firstClassInput");
-// var setNumberValue = parseInt(setNumberCount.value);
-// var setCount = setNumberValue - 1;
-// setNumberCount.value = setCount;
-// document.getElementById("firstClassInput").innerText = setCount;
-//   });
-function firstClass(cl, Isincrease) {
-  var sitNumberCount = document.getElementById(cl + "ClassInput");
+// SIT CONTROL
+function sitChange(Class, Isincrease) {
+  var sitNumberCount = document.getElementById(Class + "ClassInput");
   var sitNumberValue = parseInt(sitNumberCount.value);
-  //   var setCount = setNumberValue - 1;
   let sitCount = sitNumberValue;
   if (Isincrease == true) {
     sitCount = sitNumberValue + 1;
@@ -29,5 +9,20 @@ function firstClass(cl, Isincrease) {
     sitCount = sitNumberValue - 1;
   }
   sitNumberCount.value = sitCount;
-  document.getElementById(cl + "ClassInput").innerText = sitCount;
+  document.getElementById(Class + "ClassInput").innerText = sitCount;
+  calculateTotal();
+}
+
+// CALCULATION
+function calculateTotal() {
+  const first = document.getElementById("firstClassInput").value;
+  const sitFirstClass = parseInt(first);
+  const ecomony = document.getElementById("economyClassInput").value;
+  const sitEconomyClass = parseInt(ecomony);
+  var totalSub = sitFirstClass * 150 + sitEconomyClass * 100;
+  document.getElementById("subTotal").innerText = totalSub;
+  var vat = totalSub * 0.1;
+  document.getElementById("vat").innerText = vat;
+  var total = totalSub + vat;
+  document.getElementById("total-cost").innerText = total;
 }
